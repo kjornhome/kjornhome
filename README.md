@@ -1,159 +1,183 @@
-# KJORN HOME Website
+# Kjorn Home Website
 
-A beautiful, minimal website for KJORN HOME - an exclusive villa in Chiang Mai, Thailand.
+Welcome to the Kjorn Home website project! This document explains everything you need to know about your website in simple terms.
 
-## 🏡 About KJORN HOME
+## 🌐 Your Website
 
-KJORN HOME is the premiere vacation residence in Chiang Mai, hosting up to 15 guests in an exclusive world where contemporary design and elegance meets Thai hospitality and wonderment.
+**Live Website:** https://kjornhome.com  
+**Backup URL:** https://www.kjornhome.com  
+**Admin Preview:** https://kjornhome.vercel.app
 
-## 🚀 Tech Stack
+## 📋 What This Is
 
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: React Icons
-- **Language**: TypeScript
-- **Deployment**: Vercel
+Your website is built using modern web technology and is automatically hosted in the cloud. This means:
+- ✅ Fast loading times
+- ✅ Secure (HTTPS encryption)
+- ✅ Mobile-friendly design
+- ✅ Automatically backed up
+- ✅ 99.9% uptime guarantee
 
-## ✨ Features
+## 🔧 How It Works
 
-- **Responsive Design**: Mobile-first approach with elegant desktop layouts
-- **Hero Carousel**: Rotating image slideshow with smooth transitions
-- **Hamburger Navigation**: Mobile-friendly navigation with smooth animations
-- **Contact Form**: Comprehensive inquiry form for potential guests
-- **Gallery**: Interactive image gallery with lightbox functionality
-- **Services**: Expandable service sections with detailed information
-- **Multi-language Support**: Framework for EN/TH language switching
-- **Social Media Integration**: Links to Facebook and Instagram
-- **SEO Optimized**: Proper meta tags and structured content
+### The Simple Version:
+1. **Code lives on GitHub** (like Google Drive for code)
+2. **Website is hosted on Vercel** (like having a super-fast web server)
+3. **Domain points to Vercel** (kjornhome.com redirects visitors to your site)
+4. **Updates are automatic** (when code changes, website updates)
 
-## 🎨 Design System
+### The Technical Stack:
+- **Frontend:** Next.js (React framework)
+- **Styling:** Tailwind CSS
+- **Hosting:** Vercel
+- **Code Repository:** GitHub
+- **Domain:** GoDaddy DNS → Vercel
 
-### Typography
-- **Primary Font**: Cinzel (elegant serif for headings and body text)
-- **Secondary Font**: Glacial Indifference (for hero taglines)
+## 🖥️ Important Accounts & Access
 
-### Color Palette
-- **White**: #FFFFFF (primary background)
-- **Black**: #1A1A1A (primary text)
-- **Grey Spectrum**: #F5F5F5 to #262626 (backgrounds and accents)
+### GitHub Repository
+- **URL:** https://github.com/kjornhome/kjornhome
+- **Purpose:** Stores all website code and files
+- **Access:** Kjorn Home organization account
 
-### Layout
-- **Vertical Flow**: Single column layout as specified
-- **Minimal**: Clean, uncluttered design
-- **Elegant**: Sophisticated styling matching luxury villa aesthetic
+### Vercel Dashboard
+- **URL:** https://vercel.com
+- **Purpose:** Hosts the website and manages deployments
+- **Access:** Kjorn Home team account
 
-## 📱 Sections
+### Domain Management
+- **Registrar:** GoDaddy
+- **Domain:** kjornhome.com
+- **Purpose:** Points your domain to the website
 
-1. **Hero**: Full-screen carousel with rotating villa images
-2. **Home**: Welcome message and property overview
-3. **Facilities**: Detailed facility descriptions by floor
-4. **Rooms**: Individual room descriptions with features
-5. **Rice Barn**: Information about the historic Rice Barn House
-6. **Services**: Expandable service offerings
-7. **Gallery**: Image collection with categories
-8. **About**: Company history and staff information
-9. **Contact**: Contact form and location details
+## 📊 Website Features
 
-## 🛠️ Getting Started
+### Current Sections:
+- 🏠 Home/Hero Section
+- 🏢 About the Property
+- 🛏️ Rooms & Accommodations
+- 🌾 Rice Barn Information
+- 🍽️ Services & Amenities
+- 📸 Photo Gallery
+- 📞 Contact Form
+- 🗺️ Location Information
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+### Contact Form:
+- Emails go to: [info@kjornhome.com]
+- Powered by: Nodemailer in Zoho Mail
+- Backup: Form submissions also stored in system
 
-### Installation
+## 📧 Zoho Mail Configuration
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd kjorn-home-website
+### Current Setup:
+- **Email Address:** info@kjornhome.com
+- **SMTP Server:** smtp.zoho.com (port 587)
+- **Authentication:** App Password (not regular password)
+- **Features:** Auto-reply to guests + notification to team
+
+### How It Works:
+1. **Guest fills out contact form** on website
+2. **System sends email to:** info@kjornhome.com
+3. **Guest receives auto-reply** confirming their inquiry
+4. **Team gets notification** with all inquiry details
+
+### Environment Variables Required:
+```
+ZOHO_EMAIL=info@kjornhome.com
+ZOHO_PASSWORD=your_zoho_app_password
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+### Setting Up Zoho App Password:
+1. Log into **Zoho Mail** with info@kjornhome.com
+2. Go to **Settings → Security → App Passwords**
+3. **Generate new app password** for "Website Contact Form"
+4. **Copy the password** (save it securely)
+5. **Add to Vercel environment variables**
 
-3. Run the development server:
-```bash
-npm run dev
-```
+### Email Templates Include:
+- **Professional formatting** with KJORN HOME branding
+- **Guest inquiry details** (dates, guests, message)
+- **Auto-reply confirmation** to guests
+- **24-hour response promise**
+- **Direct contact phone** for urgent requests
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Troubleshooting Email Issues:
+- ✅ Check Zoho Mail inbox for delivery
+- ✅ Verify app password hasn't expired
+- ✅ Test from different email addresses
+- ✅ Check spam folders on both ends
 
-## 📸 Adding Images
+## 🔄 Automatic Systems
 
-The website is currently set up with placeholder images. To add actual villa photos:
+### What Happens Automatically:
+- ✅ **Backups:** Code is backed up every time changes are made
+- ✅ **Updates:** Website updates automatically when code changes
+- ✅ **Security:** HTTPS certificates renew automatically
+- ✅ **Performance:** Images and content are optimized automatically
 
-1. Create the following directories in the `public` folder:
-   - `public/images/hero/` (for hero carousel images)
-   - `public/images/gallery/` (for gallery images)
-   - `public/images/rooms/` (for room photos)
-   - `public/images/facilities/` (for facility photos)
+### What Requires Manual Action:
+- ❌ Content updates (text, photos)
+- ❌ New page creation
+- ❌ Design changes
+- ❌ Domain renewal (yearly)
 
-2. Replace the placeholder image paths in the components with actual image filenames.
+### For Hosting Issues:
+**Platform:** Vercel (99.9% uptime)  
+**Status Page:** https://vercel-status.com  
+**Auto-scaling:** Handles traffic spikes automatically
 
-### Recommended Image Specifications
-- **Hero Images**: 1920x1080px (landscape)
-- **Gallery Images**: 800x600px minimum
-- **Room Images**: 600x400px minimum
-- **Format**: JPG or WebP for better performance
+### For Domain Issues:
+**Registrar:** GoDaddy  
+**Renewal:** Annual (set up auto-renewal recommended)  
+**DNS:** Managed through GoDaddy, points to Vercel
 
-## 🚀 Deployment
+## 🚨 Troubleshooting
 
-### Vercel (Recommended)
+### If Website is Down:
+1. Check https://kjornhome.vercel.app (backup URL)
+2. Visit https://vercel-status.com for service status
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Configure the domain (kjornhome.com) in your GoDaddy account
-4. Deploy automatically on every push to main branch
+### If Contact Form Not Working:
+1. Test from different email address
+2. Check spam folder
 
-### Environment Variables
-No environment variables are currently required for basic functionality.
+### If Changes Aren't Showing:
+1. Clear your browser cache (Ctrl+F5 or Cmd+Shift+R)
+2. Try viewing in private/incognito browser window
+3. Changes can take up to 10 minutes to propagate
 
-## 📞 Contact Form Integration
+## 💡 Best Practices
 
-The contact form currently shows an alert when submitted. To integrate with a backend service:
+### For Content Updates:
+- Provide high-quality images (minimum 1200px wide)
+- Keep text concise and focused
+- Test contact form after email changes
+- Review changes on mobile devices
 
-1. **Option 1**: Use Vercel's serverless functions
-2. **Option 2**: Integrate with services like Formspree, Netlify Forms, or EmailJS
-3. **Option 3**: Connect to your own backend API
+### For Performance:
+- Optimize images before sending to developer
+- Avoid too many simultaneous changes
+- Plan major updates during low-traffic times
 
-## 🌍 Multi-language Support
+### For SEO:
+- Keep page titles under 60 characters
+- Provide descriptive alt text for images
+- Maintain consistent contact information
+- Update content regularly
 
-The website includes a language switcher framework. To add Thai translations:
+## 📈 Analytics & Monitoring
 
-1. Create translation files in a `locales` folder
-2. Implement i18n library (next-i18next recommended)
-3. Add Thai content for all sections
+### Website Traffic:
+- Can be set up with Google Analytics
+- Track visitor numbers, popular pages
+- Monitor booking inquiries
 
-## 📋 TODO
-
-- [ ] Add actual villa photographs
-- [ ] Integrate contact form with email service
-- [ ] Add Google Maps integration
-- [ ] Implement Thai language translations
-- [ ] Add villa booking system integration
-- [ ] Optimize images for web performance
-- [ ] Add more interactive animations
-- [ ] Implement analytics tracking
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is private and proprietary to KJORN HOME.
-
-## 📞 Support
-
-For technical support or questions about the website, please contact the development team.
+### Performance Monitoring:
+- Automated through Vercel
+- Page speed optimization
+- Uptime monitoring
 
 ---
 
-**KJORN HOME** - Where contemporary design and elegance meets Thai hospitality and wonderment.
+**Last Updated:** January 2025  
+**Business:** Kjorn Home  
+**Version:** 1.0
