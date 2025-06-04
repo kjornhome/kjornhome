@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { LanguageProvider } from './contexts/LanguageContext'
 import './globals.css'
 
@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description: 'Enter an exclusive world where contemporary design and elegance meets Thai hospitality and wonderment. KJORN HOME is the premiere vacation residence in Chiang Mai.',
   keywords: 'Chiang Mai villa, luxury accommodation, Thailand vacation rental, exclusive residence, Thai hospitality',
   authors: [{ name: 'KJORN HOME' }],
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
   },
+  metadataBase: new URL('https://kjornhome.com'),
   openGraph: {
     title: 'KJORN HOME - Exclusive Villa in Chiang Mai',
     description: 'Enter an exclusive world where contemporary design and elegance meets Thai hospitality and wonderment.',
@@ -34,6 +34,11 @@ export const metadata: Metadata = {
     description: 'Enter an exclusive world where contemporary design and elegance meets Thai hospitality and wonderment.',
     images: ['/images/hero/hero1.jpg'],
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
